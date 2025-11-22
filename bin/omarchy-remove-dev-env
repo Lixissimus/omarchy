@@ -1,0 +1,62 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+  echo "Usage: omarchy-remove-dev-env <ruby|node|bun|go|laravel|symfony|php|python|elixir|phoenix|rust|java|ocaml|dotnet|clojure>" >&2
+  exit 1
+fi
+
+case "$1" in
+ruby)
+  echo -e "Removing Ruby on Rails...\n"
+  ;;
+node)
+  echo -e "Removing Node.js...\n"
+  ;;
+bun)
+  echo -e "Removing Bun...\n"
+  ;;
+deno)
+  echo -e "Removing Deno...\n"
+  ;;
+go)
+  echo -e "Removing Go...\n"
+  ;;
+php)
+  echo -e "Removing PHP...\n"
+  ;;
+laravel)
+  echo -e "Removing PHP and Laravel...\n"
+  ;;
+symfony)
+  echo -e "Removing PHP and Symfony...\n"
+  ;;
+python)
+  echo -e "Removing Python...\n"
+  ;;
+elixir)
+  echo -e "Removing Elixir...\n"
+  ;;
+phoenix)
+  echo -e "Removing Phoenix Framework...\n"
+  ;;
+rust)
+  echo -e "Removing Rust...\n"
+  source ~/.bashrc
+  rustup self uninstall
+  ;;
+java)
+  echo -e "Removing Java...\n"
+  ;;
+zig)
+  echo -e "Removing Zig...\n"
+  ;;
+ocaml)
+  echo -e "Removing OCaml...\n"
+  ;;
+dotnet)
+  echo -e "Removing .NET...\n"
+  ;;
+clojure)
+  echo -e "Removing Clojure...\n"
+  ;;
+esac
